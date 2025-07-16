@@ -20,15 +20,6 @@
 
 ---
 
-## 📸 Screenshots
-
-> _Add your own screenshots here!_
-
-![LapRec Dark Mode](./screenshots/dark-mode.png)
-![LapRec Light Mode](./screenshots/light-mode.png)
-
----
-
 ## 🚦 Quick Start
 
 ### 1. Clone the repo
