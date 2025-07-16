@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+db.sqlite3
+staticfiles/
+*.joblib
+*.csv:Zone.Identifier
