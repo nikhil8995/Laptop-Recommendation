@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LapRec - Laptop Recommendations</title>
+    <link rel="stylesheet" href="/static/frontend/style.css">
+</head>
+<body class="dark-mode">
+    <button id="theme-toggle" aria-label="Toggle dark/light mode"></button>
+    <div class="container">
+        <div class="form-panel">
+            <form id="recommend-form">
+                <label for="use-case">Profession/Use-case</label>
+                <select id="use-case" name="use_case" required>
+                    <option value="budget gaming">Gaming</option>
+                    <option value="high-end editing">AI/Data Science / Video/Photo Editing</option>
+                    <option value="basic office">Office/Basic Use</option>
+                    <option value="general use">General Use</option>
+                </select>
+                <label for="max-budget">Budget (USD)</label>
+                <input type="number" id="max-budget" name="max_budget" min="100" max="5000" step="50" value="1000" required>
+                <label for="brand">Preferred Brand</label>
+                <select id="brand" name="preferred_brand">
+                    <option value="">Any</option>
+                    <option value="Dell">Dell</option>
+                    <option value="HP">HP</option>
+                    <option value="Apple">Apple</option>
+                    <option value="Lenovo">Lenovo</option>
+                    <option value="Acer">Acer</option>
+                    <option value="Asus">Asus</option>
+                    <option value="MSI">MSI</option>
+                    <option value="Samsung">Samsung</option>
+                    <option value="Microsoft">Microsoft</option>
+                    <option value="LG">LG</option>
+                    <option value="Razer">Razer</option>
+                    <option value="Avita">Avita</option>
+                    <option value="Xiaomi">Xiaomi</option>
+                    <option value="Realme">Realme</option>
+                    <option value="Chuwi">Chuwi</option>
+                    <option value="Unknown">Other</option>
+                </select>
+                <button type="submit">Get Recommendations</button>
+            </form>
+        </div>
+        <div class="recs-panel">
+            <div id="recommendations"></div>
+        </div>
+    </div>
+    <script src="/static/frontend/main.js"></script>
+</body>
+</html> 

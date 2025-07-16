@@ -1,0 +1,199 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    min-height: 100vh;
+    background: #181c24;
+    color: #f3f6fa;
+    transition: background 0.3s, color 0.3s;
+}
+body.light-mode {
+    background: #f7fafd;
+    color: #1a1a1a;
+}
+#theme-toggle {
+    position: fixed;
+    top: 1.2rem;
+    right: 1.2rem;
+    z-index: 1000;
+    background: #23283a;
+    color: #ffd700;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 1.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+body.light-mode #theme-toggle {
+    background: #e3e8ee;
+    color: #23283a;
+}
+#theme-toggle:focus {
+    outline: 2px solid #4f8cff;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100vw;
+    box-sizing: border-box;
+    transition: background 0.3s, color 0.3s;
+}
+.form-panel {
+    flex: 0 0 370px;
+    background: #23283a;
+    padding: 3.5rem 2.5rem 2.5rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 2px 0 16px rgba(79,140,255,0.07);
+    border-right: 1px solid #23283a;
+    min-width: 320px;
+    max-width: 420px;
+    transition: background 0.3s, color 0.3s;
+}
+body.light-mode .form-panel {
+    background: #fff;
+    border-right: 1px solid #e3e8ee;
+}
+#recommend-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+#recommend-form label {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+#recommend-form input, #recommend-form select {
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #3a4157;
+    font-size: 1.1rem;
+    background: #181c24;
+    color: #f3f6fa;
+    margin-bottom: 0.2rem;
+    transition: background 0.3s, color 0.3s, border 0.3s;
+}
+body.light-mode #recommend-form input, body.light-mode #recommend-form select {
+    background: #f7fafd;
+    color: #1a1a1a;
+    border: 1px solid #bfc9d1;
+}
+#recommend-form button[type="submit"] {
+    background: linear-gradient(90deg, #4f8cff 0%, #3461a4 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.9rem 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(79,140,255,0.08);
+}
+#recommend-form button[type="submit"]:hover {
+    background: linear-gradient(90deg, #3461a4 0%, #4f8cff 100%);
+    box-shadow: 0 4px 16px rgba(52,97,164,0.12);
+}
+.recs-panel {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 3.5rem 4vw 2.5rem 4vw;
+    overflow: hidden;
+    min-width: 0;
+    transition: background 0.3s, color 0.3s;
+}
+#recommendations {
+    width: 100%;
+    max-width: 900px;
+    height: 100%;
+    overflow-y: auto;
+    font-size: 1.15rem;
+    color: inherit;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+}
+#recommendations h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+    color: #ffd700;
+    font-weight: 700;
+}
+body.light-mode #recommendations h3 {
+    color: #3461a4;
+}
+#recommendations ol {
+    padding-left: 1.2rem;
+}
+#recommendations li {
+    margin-bottom: 1.5rem;
+    background: none;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+}
+.similar-block {
+    margin-top: 2.5rem;
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    background: rgba(36, 40, 56, 0.85);
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    transition: background 0.3s;
+}
+body.light-mode .similar-block {
+    background: #f7fafd;
+    box-shadow: 0 2px 12px rgba(79,140,255,0.07);
+}
+.similar-block h3 {
+    margin-top: 0;
+    color: #ffd700;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+body.light-mode .similar-block h3 {
+    color: #3461a4;
+}
+.similar-block ol {
+    padding-left: 1.2rem;
+}
+.similar-block li {
+    margin-bottom: 1.2rem;
+}
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+    .form-panel {
+        min-width: 0;
+        max-width: 100vw;
+        width: 100vw;
+        border-right: none;
+        border-bottom: 1px solid #23283a;
+        box-shadow: none;
+        padding: 2rem 1rem 1.5rem 1rem;
+    }
+    body.light-mode .form-panel {
+        border-bottom: 1px solid #e3e8ee;
+    }
+    .recs-panel {
+        padding: 2rem 2vw 1.5rem 2vw;
+    }
+    #recommendations {
+        max-width: 100vw;
+    }
+} 
