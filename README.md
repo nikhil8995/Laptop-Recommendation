@@ -24,8 +24,7 @@
 
 ### 1. Clone the repo
 ```bash
-git clone <your-repo-url>
-cd <your-repo-folder>
+git clone <https://github.com/nikhil8995/Laptop-Recommendation>
 ```
 
 ### 2. Set up the environment
@@ -99,19 +98,6 @@ staticfiles/
 *.joblib
 *.csv:Zone.Identifier
 ```
-
----
-
-## 🙏 Credits
-- **Dataset:** Your own or [Kaggle Laptop Dataset](https://www.kaggle.com/)
-- **Frontend:** Custom HTML/CSS/JS
-- **Backend:** Django, scikit-learn, TensorFlow
-- **Icons:** [Twemoji](https://twemoji.twitter.com/)
-
----
-
-## 📄 License
-MIT (or your preferred license)
 
 ---
 
